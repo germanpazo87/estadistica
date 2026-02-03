@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRTC_01 > Estadística Descriptiva</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --neon-blue: #00fff9;
+            --neon-yellow: #fbbf24;
+            --neon-pink: #ff00cc;
+            --dark-bg: #010409;
+            --panel-bg: rgba(13, 17, 23, 0.95);
+        }
+
+        body {
+            margin: 0; padding: 20px;
+            background-color: var(--dark-bg);
+            background-image: radial-gradient(circle at 2px 2px, rgba(0, 255, 249, 0.05) 1px, transparent 0);
+            background-size: 40px 40px;
+            color: #e0ffff;
+            font-family: 'Share Tech Mono', monospace;
+            min-height: 100vh;
+        }
+
+        .container { max-width: 1100px; margin: 30px auto; }
+
+        header {
+            border-left: 4px solid var(--neon-blue);
+            padding: 15px 25px; margin-bottom: 40px;
+            background: rgba(0, 255, 249, 0.03);
+            display: flex; justify-content: space-between; align-items: center;
+        }
+
+        .breadcrumb { font-size: 0.75rem; color: rgba(0, 255, 249, 0.6); letter-spacing: 2px; }
+        .breadcrumb a { color: var(--neon-blue); text-decoration: none; }
+        .breadcrumb span { margin: 0 5px; color: rgba(0, 255, 249, 0.3); }
+
+        h1 { font-family: 'Orbitron', sans-serif; margin: 5px 0 0 0; font-size: 1.8rem; text-shadow: 0 0 10px var(--neon-blue); }
+
+        .tools-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
+
+        /* ESTIL BASE TARGETA */
+        .tool-card {
+            background: var(--panel-bg); 
+            border: 1px solid rgba(0, 255, 249, 0.2);
+            padding: 25px; 
+            text-decoration: none; 
+            color: white; 
+            transition: 0.3s;
+            position: relative; 
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 90% 100%, 0 100%);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .tool-card:hover { border-color: var(--neon-blue); transform: scale(1.02); box-shadow: 0 0 15px rgba(0, 255, 249, 0.1); }
+
+        /* VARIANT ROSA */
+        .active-pink { border-color: var(--neon-pink) !important; }
+        .active-pink .tool-id { color: var(--neon-pink); }
+        .active-pink h3 { text-shadow: 0 0 10px var(--neon-pink); }
+
+        .tool-id { font-family: 'Orbitron', sans-serif; font-size: 0.7rem; color: var(--neon-blue); margin-bottom: 10px; display: block; }
+        .tool-card h3 { font-family: 'Orbitron', sans-serif; font-size: 1.1rem; margin: 5px 0 15px 0; color: #fff; }
+        .tool-card p { color: #94a3b8; font-size: 0.85rem; line-height: 1.4; margin: 0; }
+
+        .status-tag { margin-top: 20px; font-size: 0.65rem; color: var(--neon-blue); text-transform: uppercase; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 10px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="protocol-title">
+            <div class="breadcrumb">
+                <a href="https://germanpazo87.github.io/">CORE</a><span>&gt;</span>
+                <a href="https://germanpazo87.github.io/estadistica/">SECTOR_03: INFODYNAMICS</a><span>&gt;</span>
+                PROTOCOL_01:ESTADÍSTICA
+            </div>
+            <h1>PROTOCOL ESTADÍSTICA</h1>
+        </div>
+    </header>
+
+    <div class="tools-grid">
+
+        <a href="#" class="tool-card">
+            <span class="tool-id">MODUL_EXEC // EINA_01</span>
+            <h3>ESCÀNER DE POBLACIÓ</h3>
+            <p>Definició de paràmetres base: Població, Mostra i classificació de Variables (Qualitatives i Quantitatives).</p>
+            <div class="status-tag">Status: Operational // Data_Link: Active</div>
+        </a>
+
+        <a href="#" class="tool-card">
+            <span class="tool-id">MODUL_EXEC // EINA_02</span>
+            <h3>GENERADOR DE TAULES</h3>
+            <p>Organització de fluxos de dades en freqüències absolutes, relatives i acumulades. Gestió d'intervals i marques de classe.</p>
+            <div class="status-tag">Status: Operational // Data_Link: Active</div>
+        </a>
+
+        <a href="#" class="tool-card">
+            <span class="tool-id">MODUL_EXEC // EINA_03</span>
+            <h3>UNITAT DE CENTRALITZACIÓ</h3>
+            <p>Càlcul del nucli de dades: Mitjana ($\bar{x}$), Mediana ($M_e$) i Moda ($M_o$). Anàlisi de robustesa de dades.</p>
+            <div class="status-tag">Status: Operational // Processor: Active</div>
+        </a>
+
+        <a href="#" class="tool-card">
+            <span class="tool-id">MODUL_EXEC // EINA_04</span>
+            <h3>MESURADOR DE DISPERSIÓ</h3>
+            <p>Càlcul de la variabilitat del sistema: Recorregut, Variància i Desviació Típica ($\sigma$).</p>
+            <div class="status-tag">Status: Operational // Precision: High</div>
+        </a>
+
+        <a href="#" class="tool-card">
+            <span class="tool-id">MODUL_EXEC // EINA_05</span>
+            <h3>VISUALITZADOR DE GAUSS</h3>
+            <p>Projecció de la Distribució Normal. Aplicació de la regla 68-95-99 per a la predicció de comportaments.</p>
+            <div class="status-tag">Status: Operational // Simulation: ON</div>
+        </a>
+
+        <a href="#" class="tool-card">
+            <span class="tool-id">MODUL_EXEC // EINA_06</span>
+            <h3>FILTRE DE BIAIX I CRÍTICA</h3>
+            <p>Protocol de detecció de manipulacions estadístiques, mostres no representatives i errors de correlació.</p>
+            <div class="status-tag" style="color:var(--neon-yellow)">Status: Warning // Security_Audit: ON</div>
+        </a>
+
+        <a href="#" class="tool-card active-pink">
+            <span class="tool-id">RECURS_SISTEMA // DOSSIER_07</span>
+            <h3>DOSSIER D'ESTADÍSTICA</h3>
+            <p>Accés al repositori complet d'exercicis: des de l'escaner de poblacions fins a l'enigma de "Poble ric, poble pobre".</p>
+            <div class="status-tag" style="color:var(--neon-pink)">Status: Ready // Download_Available: YES</div>
+        </a>
+
+    </div>
+
+    <footer style="margin-top: 50px; padding: 25px 0; border-top: 1px solid rgba(0, 255, 249, 0.1); text-align: center; font-family: 'Share Tech Mono', monospace;">
+        <div style="margin-bottom: 10px; opacity: 0.6;">
+            <img src="https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg" alt="CC0" style="width: 70px; filter: grayscale(1) brightness(1.5);">
+        </div>
+        <div style="font-size: 0.75rem; color: rgba(148, 163, 184, 0.8); line-height: 1.6;">
+            Recurs educatiu creat per <span style="color: var(--neon-blue);">Germán Pazo</span> sota llicència <strong>CC0 (Domini Públic)</strong>.
+            <br>
+            <span style="color: rgba(0, 255, 249, 0.3); font-size: 0.65rem; letter-spacing: 1px;">PROJECTE: LA MATRIU // ESTADÍSTICA // 2026</span>
+        </div>
+    </footer>
+</div>
+
+</body>
+</html>
